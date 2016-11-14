@@ -1,5 +1,5 @@
 # handle shipping errors gracefully during order update
-Spree::Api::V1::OrdersController.class_eval do
+Spree::OrdersController.class_eval do
 
   rescue_from Spree::ShippingError, with: :handle_shipping_error
 
